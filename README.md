@@ -56,3 +56,9 @@ In Pull Model, the individual servers contact the master server and configure th
 **4. What are some of the consquences of not having proper configuration management?**
 
 **Answer:**  
+Following are the potential problems of improper configuration management:
++ Configuration Management implemented without proper analysis and design will result in excessive cost and time.
++ Configuration Management not implemented with flexible design in mind will result in poor performance of the system.
++ Configuration Management not implemented with proper testing and release schedule will result in security bugs.
++ Configuration Management not tested properly will result in unexpected bugs/network going down, leading to large business loss.
++ Improper Configuration Management also require extra overhead cost, time and human-effort to find and fix the bug.
