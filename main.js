@@ -1,24 +1,12 @@
-// var needle = require("needle");
-// var os   = require("os");
 var aws = require("aws-sdk");
 var sleep = require('sleep-promise');
 var fs = require('fs');
 var Promise = require('promise');
 
 var config = {};
-// config.Dropletoken = process.env.DOTOKEN;
 config.AccessKeyID = process.env.AWS_ACCESS_KEY_ID;
 config.SecretAccessKey = process.env.AWS_SECRET_ACCESS_KEY;
 
-
-// var headers = {
-// 	'Content-Type':'application/json',
-// 	Authorization: 'Bearer ' + config.Dropletoken
-// };
-
-// var DOname = "UnityId"+os.hostname();
-// var DOregion = "nyc1"; // Fill one in from #1
-// var DOimage = "ubuntu-16-04-x64"; // Fill one in from #2
 
 var AWSName = "AWSInstance"
 var SGname = AWSName + "-SGName"
@@ -40,33 +28,6 @@ aws.config.update({
 // AWS client
 var ec2 = new aws.EC2()
 
-// // Digital Ocean client
-// var client =
-// {
-// 	getDropletIP: function(id, onResponse )
-// 	{
-// 		needle.get("https://api.digitalocean.com/v2/droplets/"+id, {headers:headers}, onResponse)
-// 	},
-//
-// 	createDroplet: function (dropletName, region, imageName, onResponse)
-// 	{
-// 		var data =
-// 		{
-// 			"name": dropletName,
-// 			"region":region,
-// 			"size":"512mb",
-// 			"image":imageName,
-// 			"ssh_keys":[process.env.SSH],
-// 			"backups":false,
-// 			"ipv6":false,
-// 			"user_data":null,
-// 			"private_networking":null
-// 		};
-//
-// 		needle.post("https://api.digitalocean.com/v2/droplets", data, {headers:headers,json:true}, onResponse );
-// 	}
-// };
-
 // AWS EC2 Instance Creation
 CreateEC2Instance().then(function(IP){
 	console.log("AWS Instance Public IP", IP);
@@ -74,12 +35,6 @@ CreateEC2Instance().then(function(IP){
 	console.log("Error Occured during instance Creation: ", err);
 });
 
-// // Digital Ocean Instance Creation
-// CreateDigitalOceanInstance(DOname, DOregion, DOimage).then(function(DOIP){
-// 	console.log("Digital Ocean Instance IP", DOIP);
-// }).catch(function(err) {
-// 	console.log("Error Occured during instance Creation: ", err);
-// });
 
 
 
@@ -226,44 +181,3 @@ function DescribeInstance(paramsDescribe) {
 		});
 	});
 }
-
-
-// function CreateDigitalOceanInstance(name, region, image){
-// 	return new Promise(function(resolve, reject){
-// 		CreateDroplet(name, region, image)
-// 		.then(function(dropletId){
-// 			return GetDropletIP(dropletId);
-// 		}).then(function(DOIP) {
-// 			resolve(DOIP);
-// 		}).catch(function(err) {
-// 			reject(err);
-// 		})
-// 	});
-// }
-//
-// function CreateDroplet(name, region, image){
-// 	return new Promise(function(resolve, reject){
-// 		client.createDroplet(name, region, image, function(err, resp, body)
-// 		{
-// 			// console.log( "Calls remaining ", resp.headers["ratelimit-remaining"] );
-// 			if(!err && resp.statusCode == 202)
-// 			{
-// 				var dropletId = body.droplet.id;
-// 				console.log("Created Digital Ocean instance: " + dropletId);
-// 				resolve(dropletId);
-// 			}
-// 		});
-// 	});
-// }
-//
-// function GetDropletIP(dropletId){
-// 	return new Promise(function(resolve, reject){
-// 		sleep(2000).then(function(){
-// 			client.getDropletIP(dropletId, function(error, response){
-// 				var IP_address = response.body.droplet.networks.v4[0].ip_address;
-// 				// console.log("IP: "+IP_address);
-// 				resolve(IP_address);
-// 			});
-// 		});
-// 	});
-// }
