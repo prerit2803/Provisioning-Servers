@@ -26,7 +26,12 @@ Operation like `a = a + 1` (Adding One to any number will increment the value).
 **2. Describe several issues related to management of your inventory.**
 
 **Answer:**  
-
+Some of the issues related to inventory management are:
++ Inventory like Tokens, SSH Keys etc. should be updated as frequenstly as possible to avoid expiry.
++ Keep a backup/remote access of the inventory data, just in case the main server goes down.
++ Securely store the inventory like tokens, SSH Keys, Private IP addresses; from outside intrusion.
++ Avoiding manual intervention, automating the asset management will avoid time and bugs.
++ Knowledge of inventory is important for predicting the cost and demand, this helps in overhead cost. Avoiding redundant inventory data is also important.
 
 **3. Describe two configuration models. What are disadvantages and advantages of each model?**
 
