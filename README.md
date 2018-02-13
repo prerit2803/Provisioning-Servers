@@ -2,15 +2,26 @@
 
 ## Steps to run:
 + Clone the repo. `cd` into the repo.
-+ Install Packages:
++ Give Execute permission to the script file:
   ```
-  npm install
+  chmod +x CM.sh
   ```
-+ Run the `main.js` file:
++ Insert all the token values into the `CM.sh` file.
++ Run the `CM.sh` file:
 
   ```
-  node main.js
+  ./CM.sh
   ```
++ To check Digital Ocean server is up:
+  ```
+  ping <DIGITAL-OCEAN-IP-ADDRESS>
+  ```
+  If ping is unsuccessful, try after some time because it takes few minutes to server to get up.
++ To check AWS EC2 server is up:
+  ```
+  ssh -i AWSInstance-key.pem ubuntu@<AWS-IP-ADDRESS>
+  ```
+  If SSH is unsuccessful, try after some time because it takes few minutes to server to get up.
 ## Conceptual Questions
 **1. Define idempotency. Give two examples of an idempotent operation and non-idempotent operation.**
 
@@ -71,3 +82,10 @@ Following are the potential problems of improper configuration management:
 
 ## Screencast
 [Demo](https://youtu.be/ziefQB5JUjo)
+
+### References:
++ [Link1](http://www.restapitutorial.com/lessons/idempotency.html)
++ [Link2](https://thwack.solarwinds.com/community/solarwinds-community/geek-speak_tht/blog/2013/10/10/bad-configuration-management-impact-on-network-operations)
++ [Link3](http://www.itilnews.com/index.php?pagename=itil_configuration_management)
++ [Link4](https://agiletesting.blogspot.com/2010/03/automated-deployment-systems-push-vs.html)
++ [Link5](http://searchitoperations.techtarget.com/feature/Asset-management-tools-in-the-modern-data-center-Advisory-Board-QA)
