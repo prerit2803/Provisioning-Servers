@@ -7,6 +7,7 @@ echo "----------------------------------------------------"
 echo "Creating Digital Ocean Instance"
 echo "----------------------------------------------------"
 export DOTOKEN = "DIGITAL-OCEAN-TOKEN-HERE"
+export SSH = "DIGITAL-OCEAN-SSH-KEY-ID-HERE"
 node DigitalOcean.js
 echo "----------------------------------------------------"
 echo "Creating AWS EC2 Instance"
