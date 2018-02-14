@@ -83,6 +83,9 @@ Following are the potential problems of improper configuration management:
 ## Screencast
 [Demo](https://youtu.be/ziefQB5JUjo)
 
+### Screenshot
+![](https://github.ncsu.edu/pbhanda2/HW1-Part-2-Provisioning-Servers/blob/master/demo.gif)
+
 ### References:
 + [Link1](http://www.restapitutorial.com/lessons/idempotency.html)
 + [Link2](https://thwack.solarwinds.com/community/solarwinds-community/geek-speak_tht/blog/2013/10/10/bad-configuration-management-impact-on-network-operations)
