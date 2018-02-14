@@ -13,4 +13,4 @@ export AWS_SECRET_ACCESS_KEY = "AWS-SECRET-ACCESS-KEY-HERE"
 echo "----------------------------------------------------"
 echo "Creating AWS EC2 Instance"
 echo "----------------------------------------------------"
-node aws.js
+node AWS.js
