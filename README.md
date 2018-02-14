@@ -89,8 +89,11 @@ Following are the potential problems of improper configuration management:
 ![](https://github.ncsu.edu/pbhanda2/HW1-Part-2-Provisioning-Servers/blob/master/ServerDemo.gif)
 
 ### References:
-+ [Link1](http://www.restapitutorial.com/lessons/idempotency.html)
-+ [Link2](https://thwack.solarwinds.com/community/solarwinds-community/geek-speak_tht/blog/2013/10/10/bad-configuration-management-impact-on-network-operations)
-+ [Link3](http://www.itilnews.com/index.php?pagename=itil_configuration_management)
-+ [Link4](https://agiletesting.blogspot.com/2010/03/automated-deployment-systems-push-vs.html)
-+ [Link5](http://searchitoperations.techtarget.com/feature/Asset-management-tools-in-the-modern-data-center-Advisory-Board-QA)
++ [Idempotency](http://www.restapitutorial.com/lessons/idempotency.html)
++ [Bad Configuration Management](https://thwack.solarwinds.com/community/solarwinds-community/geek-speak_tht/blog/2013/10/10/bad-configuration-management-impact-on-network-operations)
++ [Configuration Management](http://www.itilnews.com/index.php?pagename=itil_configuration_management)
++ [Push Vs Pull Model](https://agiletesting.blogspot.com/2010/03/automated-deployment-systems-push-vs.html)
++ [Assest Management](http://searchitoperations.techtarget.com/feature/Asset-management-tools-in-the-modern-data-center-Advisory-Board-QA)
++ [AWS SDK Examples](https://github.com/awsdocs/aws-doc-sdk-examples)
++ [Servers Workshop](https://github.ncsu.edu/CSC-DevOps-Spring2015/ServersWorkshop)
++ [Digital Ocean API](https://developers.digitalocean.com/documentation/v2/)
