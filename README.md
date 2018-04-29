@@ -84,9 +84,9 @@ Following are the potential problems of improper configuration management:
 [Demo](https://youtu.be/ziefQB5JUjo)
 
 ### Screenshots
-![](https://github.ncsu.edu/pbhanda2/HW1-Part-2-Provisioning-Servers/blob/master/demo.gif)  
+![](./demo.gif)  
 
-![](https://github.ncsu.edu/pbhanda2/HW1-Part-2-Provisioning-Servers/blob/master/ServerDemo.gif)
+![](./ServerDemo.gif)
 
 ### References:
 + [Idempotency](http://www.restapitutorial.com/lessons/idempotency.html)
